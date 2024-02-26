@@ -1,0 +1,76 @@
+" IDEA stuff
+set ideajoin
+set idearefactormode=keep
+set ideamarks
+set rnu
+let mapleader = " "
+
+" Mappings
+map <leader>e <Action>(ActivateProjectToolWindow)
+
+map [d <Action>(GotoPreviousError)
+map ]d <Action>(GotoNextError)
+
+" Search
+map <leader>fa <Action>(SearchEverywhere)
+map <leader>ff <Action>(GotoFile)
+map <leader>fc <Action>(FindInPath)
+map <leader>fs <Action>(GotoSymbol)
+
+map <leader>e <Action>(RecentFiles)
+map <leader>fd <Action>(HelpDiagnosticTools)
+map <leader>ft <Action>(ActivateTODOToolWindow)
+
+" Git
+map <leader>gg <Action>(CheckinProject)
+map <leader>gp <Action>(Vcs.UpdateProject)
+map <leader>gP <Action>(Vcs.Push)
+map <leader>ga <Action>(Annotate)
+
+" Debug
+map <leader>bp <Action>(ToggleLineBreakpoint)
+map <F5> <Action>(Debug)
+map <F6> <Action>(EvaluateExpression)
+map <F10> <Action>(StepOver)
+map <F11> <Action>(StepInto)
+map <F12> <Action>(StepOut)
+
+xmap gc <Action>(CommentByLineComment)
+
+" Test
+map <leader>ot <Action>(GotoTest)
+map <leader>gt <Action>(GenerateTestMethod)
+map <leader>C <Action>(Generate)
+map <leader>rc <Action>(RunClass)
+
+" Completion
+imap <C-f> <Action>(CodeCompletion)
+
+" LSP
+map gD <Action>(GotoTypeDeclaration)
+map gd <Action>(GotoDeclaration)
+map gi <Action>(GotoImplementation)
+map gr <Action>(GotoDeclaration)
+map <leader>rn <Action>(RenameElement)
+
+map <leader>oc <Action>(ReformatCode)
+map <leader>oi <Action>(OptimizeImports)
+map <leader>oa <Action>(ReformatCode)<Action>(OptimizeImports)
+map <leader>jev <Action>(IntroduceVariable)
+map <leader>jec <Action>(IntroduceConstant)
+map <leader>jem <Action>(ExtractMethod)
+
+map <leader>k <Action>(QuickJavaDoc)
+imap <C-s> <Action>(ParameterInfo)
+map <C-s> <Action>(ParameterInfo)
+map <leader>s <Action>(GotoSymbol)
+map <leader>S <Action>(GotoSymbol)
+
+map <leader>a <Action>(ShowIntentionActions)
+
+map <leader>T <Action>(VimFindActionIdAction)
+
+map <leader>fl <action>(SelectInProjectView)
+map <leader>qd <action>(QuickImplementations)
+map <leader>p <action>(PasteMultiple)
+map <leader>n <action>(NewElement)
