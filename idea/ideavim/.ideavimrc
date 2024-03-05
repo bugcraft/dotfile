@@ -1,0 +1,70 @@
+" IDEA stuff
+" set ideajoin
+" set idearefactormode=keep
+" set ideamarks
+" set rnu
+
+" Map leader to space
+let mapleader = " "
+
+" Mappings
+map <leader>e <Action>(ActivateProjectToolWindow)
+
+" Navigation
+" nnoremap <Leader>l :bp<CR> " prev page
+" nnoremap <Leader>h :bn<CR> " next page
+map <leader>l <Action>(Forward)
+map <leader>h <Action>(Back)
+map <leader>] <Action>(GotoNextError)
+map <leader>[ <Action>(GotoPreviousError)
+map <leader>e <Action>(RecentFiles)
+
+" Search
+map <leader>fa <Action>(SearchEverywhere)
+map <leader>fn <Action>(GotoFile)
+map <leader>fc <Action>(FindInPath)
+map <leader>fs <Action>(GotoSymbol)
+
+" LSO / Actions
+map <leader>N <action>(NewElement)
+map <leader>hi <Action>(CollapseRegion)
+map <leader>un <Action>(ExpandAllRegions)
+map <leader>pi <Action>(ParameterInfo)
+map td <Action>(GotoTypeDeclaration)
+map gd <Action>(GotoDeclaration)
+map gi <Action>(GotoImplementation)
+map gr <Action>(GotoDeclaration)
+map <leader>rn <Action>(RenameElement)
+map <leader>rc <Action>(ReformatCode)
+map <leader>oc <Action>(OptimizeImports)
+map <leader>oa <Action>(ReformatCode)<Action>(OptimizeImports)
+map <leader>ev <Action>(IntroduceVariable)
+map <leader>ec <Action>(IntroduceConstant)
+map <leader>em <Action>(ExtractMethod)
+map <leader>k <Action>(QuickJavaDoc)
+map <leader>a <Action>(ShowIntentionActions)
+map <leader>T <Action>(VimFindActionIdAction)
+map <leader>fl <action>(SelectInProjectView)
+
+" Git
+ma <leader>gg <Action>(CheckinProject)
+map <leader>gp <Action>(Vcs.UpdateProject)
+map <leader>gP <Action>(Vcs.Push)
+map <leader>ga <Action>(Annotate)
+
+" Debug
+map <leader>bp <Action>(ToggleLineBreakpoint)
+map <F5> <Action>(Debug)
+map <F6> <Action>(EvaluateExpression)
+map <F10> <Action>(StepOver)
+map <F11> <Action>(StepInto)
+map <F12> <Action>(StepOut)
+
+" Test
+map <leader>ot <Action>(GotoTest)
+map <leader>gt <Action>(GenerateTestMethod)
+map <leader>C <Action>(Generate)
+map <leader>rc <Action>(RunClass)
+
+" Completion
+imap <leader>i <Action>(CodeCompletion)
