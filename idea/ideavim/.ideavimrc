@@ -4,67 +4,78 @@
 " set ideamarks
 " set rnu
 
-" Map leader to space
-let mapleader = " "
+" nnoremap leader to space
+" let nnoremapleader = " "
 
-" Mappings
-map <leader>e <Action>(ActivateProjectToolWindow)
+" nnoremappings
+" nnoremap <space>e :action ActivateProjectToolWindow<cr>
 
 " Navigation
-" nnoremap <Leader>l :bp<CR> " prev page
-" nnoremap <Leader>h :bn<CR> " next page
-map <leader>l <Action>(Forward)
-map <leader>h <Action>(Back)
-map <leader>] <Action>(GotoNextError)
-map <leader>[ <Action>(GotoPreviousError)
-map <leader>e <Action>(RecentFiles)
+" nnorennoremap <space>l :bp<CR> " prev page
+" nnorennoremap <space>h :bn<CR> " next page
+nnoremap <space>l :action Forward<cr>
+nnoremap <space>h :action Back<cr>
+nnoremap <space>] :action GotoNextError<cr>
+nnoremap <space>[ :action GotoPreviousError<cr>
+nnoremap <space>ee :action RecentFiles<cr>
+
+" easy system clipboard copy/paste
+nnoremap <Space>y "+y
+nnoremap <Space>p "+p
+nnoremap <space>Y "+Y
+nnoremap <space>P "+P
 
 " Search
-map <leader>fa <Action>(SearchEverywhere)
-map <leader>fn <Action>(GotoFile)
-map <leader>fc <Action>(FindInPath)
-map <leader>fs <Action>(GotoSymbol)
+nnoremap <space>fh :action SearchEverywhere<cr>
+nnoremap <space>fn :action GotoFile<cr>
+nnoremap <space>fc :action FindInPath<cr>
+nnoremap <space>fs :action GotoSymbol<cr>
+nnoremap <space>fh :action Find<cr>
+nnoremap <space>rh :action Replace<cr>
 
 " LSO / Actions
-map <leader>N <action>(NewElement)
-map <leader>hi <Action>(CollapseRegion)
-map <leader>un <Action>(ExpandAllRegions)
-map <leader>pi <Action>(ParameterInfo)
-map td <Action>(GotoTypeDeclaration)
-map gd <Action>(GotoDeclaration)
-map gi <Action>(GotoImplementation)
-map gr <Action>(GotoDeclaration)
-map <leader>rn <Action>(RenameElement)
-map <leader>rc <Action>(ReformatCode)
-map <leader>oc <Action>(OptimizeImports)
-map <leader>oa <Action>(ReformatCode)<Action>(OptimizeImports)
-map <leader>ev <Action>(IntroduceVariable)
-map <leader>ec <Action>(IntroduceConstant)
-map <leader>em <Action>(ExtractMethod)
-map <leader>k <Action>(QuickJavaDoc)
-map <leader>a <Action>(ShowIntentionActions)
-map <leader>T <Action>(VimFindActionIdAction)
-map <leader>fl <action>(SelectInProjectView)
+nnoremap <space>N :action NewElement<cr>
+nnoremap <space>hi :action CollapseRegion<cr>
+nnoremap <space>un :action ExpandAllRegions<cr>
+nnoremap <space>pi :action ParameterInfo<cr>
+nnoremap <space>td :action GotoTypeDeclaration<cr>
+nnoremap <space>gd :action GotoDeclaration<cr>
+nnoremap <space>gi :action GotoImplementation<cr>
+nnoremap <space>gr :action GotoDeclaration<cr>
+nnoremap <space>rn :action RenameElement<cr>
+nnoremap <space>rc :action ReformatCode<cr>
+nnoremap <space>oc :action OptimizeImports<cr>
+nnoremap <space>oa :action ReformatCode<cr> :action OptimizeImports<cr>
+nnoremap <space>ev :action IntroduceVariable<cr>
+nnoremap <space>ec :action IntroduceConstant<cr>
+nnoremap <space>em :action ExtractMethod<cr>
+nnoremap <space>k :action QuickJavaDoc<cr>
+nnoremap <space>a :action ShowIntentionActions<cr>
+nnoremap <space>T :action VimFindActionIdAction<cr>
+nnoremap <space>fl :action SelectInProjectView<cr>
+nnoremap <space>ne :action NewElement<cr>
+
 
 " Git
-ma <leader>gg <Action>(CheckinProject)
-map <leader>gp <Action>(Vcs.UpdateProject)
-map <leader>gP <Action>(Vcs.Push)
-map <leader>ga <Action>(Annotate)
+ma <space>gg :action CheckinProject<cr>
+nnoremap <space>gp :action Vcs.UpdateProject<cr>
+nnoremap <space>gP :action Vcs.Push<cr>
+nnoremap <space>ga :action Annotate<cr>
+nnoremap <space>gl :action Vcs.Show.Log<cr>
 
 " Debug
-map <leader>bp <Action>(ToggleLineBreakpoint)
-map <F5> <Action>(Debug)
-map <F6> <Action>(EvaluateExpression)
-map <F10> <Action>(StepOver)
-map <F11> <Action>(StepInto)
-map <F12> <Action>(StepOut)
+nnoremap <space>bp :action ToggleLineBreakpoint<cr>
+nnoremap <F5> :action Debug<cr>
+nnoremap <F6> :action EvaluateExpression<cr>
+nnoremap <F10> :action StepOver<cr>
+nnoremap <F11> :action StepInto<cr>
+nnoremap <F12> :action StepOut<cr>
 
 " Test
-map <leader>ot <Action>(GotoTest)
-map <leader>gt <Action>(GenerateTestMethod)
-map <leader>C <Action>(Generate)
-map <leader>rc <Action>(RunClass)
+nnoremap <space>ot :action GotoTest<cr>
+nnoremap <space>gt :action GenerateTestMethod<cr>
+nnoremap <space>C :action Generate<cr>
+nnoremap <space>rc :action RunClass<cr>
 
 " Completion
-imap <leader>i <Action>(CodeCompletion)
+nnoremap <space>a :action CodeCompletion<cr>
